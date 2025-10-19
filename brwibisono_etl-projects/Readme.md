@@ -28,10 +28,10 @@ Notes: Akan selalu update sesuai dengan tingkat skill dan materi yang telah dipa
 ```mermaid
 flowchart LR
     A[Sources: API / File / Email / FTP / DB] --> B[Python ETL - Extract and Load]
-    B --> C[BigQuery Raw Layer]
-    C --> D[SQL Transform - Scheduled Queries]
-    D --> E[BigQuery Clean Layer]
-    E --> F[Looker Studio Dashboard]
+    B --> C[BigQuery Raw]
+    C --> D[SQL Clean Transform]
+    D --> E[BigQuery Report]
+    E --> F[Tableau Dashboard]
 ```
 
 ## Struktur
