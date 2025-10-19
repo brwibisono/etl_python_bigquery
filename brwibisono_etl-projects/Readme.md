@@ -8,7 +8,7 @@ Notes: Akan selalu update sesuai dengan tingkat skill dan materi yang telah dipa
 * Data Warehouse: Google BigQuery
 * Proses & Transformasi Data: BigQuery (SQL, scheduled queries)
 * Integrasi Data: API, File (CSV/Excel), Email (IMAP), FTP/SFTP, Traditional Database
-* Visualisasi Data: Google Looker Studio
+* Visualisasi Data: Tableau
 
 
 ## Workflow Pipeline
@@ -20,7 +20,7 @@ Notes: Akan selalu update sesuai dengan tingkat skill dan materi yang telah dipa
    - Membersihkan & mentransformasi data dengan SQL.  
    - Otomatisasi proses menggunakan **scheduled queries** → menghasilkan **BigQuery Clean Layer**.  
 
-3. **Visualization (Looker Studio)**  
+3. **Visualization (Tableau)**  
    - Data diolah lebih lanjut untuk membuat dashboard interaktif. 
 
 ## Flowchart
@@ -37,22 +37,19 @@ flowchart LR
 ## Struktur
 
 ```
-├── api_etl/ # Extract dari API publik
-├── db_etl/ # Extract dari Database tradisional
-├── file_etl/ # Extract dari CSV/Excel
-├── email_ftp_etl/ # Extract dari Email/FTP
-├── python_bigquery/ # Proyek python - bigquery
+├── etl_indo_earthquake/ # Extract dari API USGS
+├── db_etl/ # Extract dari API Mateo Weather & API Mateo Air Quality
 └── README.md
 ```
 
-## Sertifikat
-https://bit.ly/brwibisono_sertifikat
+## Tableau Public
+https://public.tableau.com/app/profile/brwibisono/vizzes
 
 ## Portofolio SQL BigQuery
 https://github.com/brwibisono/portofolio_data-analyst
 
-## Learning Journey	
-www.github.com/brwibisono/belajar-data-analis
+## Sertifikat
+https://bit.ly/brwibisono_sertifikat
 
 ## Daily Update
 www.threads.com/@brbelajardata
