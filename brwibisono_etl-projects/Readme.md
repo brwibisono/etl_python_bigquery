@@ -37,8 +37,8 @@ flowchart LR
 ## Struktur
 
 ```
-├── etl_indo_earthquake/ # Extract dari API USGS
-├── db_etl/ # Extract dari API Mateo Weather & API Mateo Air Quality
+├── pipeline_data_gempa/ # Extract dari API USGS
+├── pipeline_cuaca_polusi/ # Extract dari API Mateo Weather & API Mateo Air Quality
 └── README.md
 ```
 
