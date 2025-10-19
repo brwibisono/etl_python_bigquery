@@ -1,0 +1,15 @@
+# Credential
+*.json
+service_account.json
+credentials.json
+
+# Notebook & hasil lokal
+*.ipynb
+*.csv
+*.xlsx
+*.log
+
+# Cache / file sistem
+__pycache__/
+.DS_Store
+.env
