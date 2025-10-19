@@ -130,7 +130,7 @@ with data updated automatically from BigQuery.
 
 ## 🧠 Key Insights
 
-###🇮🇩 Temuan Utama
+### 🇮🇩 Temuan Utama
 
 - Aktivitas gempa tertinggi terjadi di wilayah Timur Indonesia
 
@@ -190,7 +190,7 @@ Fokus saya adalah membangun pipeline ETL otomatis yang efisien dan mudah diinteg
 I'm Bramantya Wibisono (brbelajardata) — a Data Analyst exploring Data Engineering Pipelines.
 My focus is building automated ETL systems that connect seamlessly to analytical dashboards.
 
-## Email: br.wibisono@gmail.com
+## 📧 Email: br.wibisono@gmail.com
 
 ## 🔗 [Tableau Public](https://public.tableau.com/app/profile/brwibisono/vizzes)
 
