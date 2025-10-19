@@ -37,22 +37,18 @@ flowchart LR
 ## Struktur
 
 ```
-├── pipeline_data_gempa/ # Extract dari API USGS
-├── pipeline_cuaca_polusi/ # Extract dari API Mateo Weather & API Mateo Air Quality
+├── pipeline_data_gempa/ # Extract dari API USGS (19 - 10 - 2025)
+├── pipeline_cuaca_polusi/ # Extract dari API Mateo Weather & API Mateo Air Quality (20 - 10 - 2025)
 └── README.md
 ```
 
-## Tableau Public
-https://public.tableau.com/app/profile/brwibisono/vizzes
+## [Tableau Public](https://public.tableau.com/app/profile/brwibisono/vizzes)
 
-## Portofolio SQL BigQuery
-https://github.com/brwibisono/portofolio_data-analyst
+## [Portofolio SQL BigQuery](https://github.com/brwibisono/portofolio_data-analyst)
 
-## Sertifikat
-https://bit.ly/brwibisono_sertifikat
+## [Sertifikat](https://bit.ly/brwibisono_sertifikat)
 
-## Daily Update
-www.threads.com/@brbelajardata
+## [Social Media (Threads)](www.threads.com/@brbelajardata)
 
 ## Kontak
 Untuk pertanyaan atau umpan balik, silakan hubungi saya melalui br.wibisono@gmail.com
