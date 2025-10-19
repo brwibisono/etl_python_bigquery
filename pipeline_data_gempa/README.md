@@ -15,7 +15,7 @@ The pipeline extracts real-time data, cleans it using SQL transformations, and v
 
 ```mermaid
 flowchart LR
-    A[Sources: API USGS] --> B[Python ETL - Extract and Load]
+    A[API USGS] --> B[Python ETL - Extract and Load]
     B --> C[BigQuery Raw]
     C --> D[SQL Clean Transform]
     D --> E[BigQuery Report]
