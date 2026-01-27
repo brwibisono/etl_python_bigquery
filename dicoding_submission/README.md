@@ -86,6 +86,7 @@ Dashboard menampilkan informasi berikut:
 ```
 submissions
 ├── dashboard/
+|   ├── dashboard.png
 |   ├── dashboard.py
 |   └── main_data.csv
 ├── data/                                          
@@ -96,7 +97,7 @@ submissions
 |   ├── product_category_name_translation.csv
 |   ├── products_dataset_clean.csv
 |   └── products_dataset.csv
-├── 01_data_preparation.ipynb
+├── Proyek_Analisi_Data.ipynb
 ├── requirements.txt
 └── README.md
 ```
