@@ -1,87 +1,92 @@
-# E-Commerce Data Analysis Project
+# Proyek Analisis Data – E-Commerce
 
-This project is part of the **Data Analysis Final Project** and focuses on analyzing
-an e-commerce public dataset to extract business insights and present them
-through an interactive dashboard.
+Proyek ini merupakan bagian dari **Proyek Akhir Analisis Data Dicoding**.
+Tujuan dari proyek ini adalah melakukan analisis data e-commerce untuk
+menghasilkan insight bisnis serta menyajikannya dalam bentuk dashboard
+interaktif menggunakan Streamlit.
 
 ---
 
 ## 📦 Dataset
 
-The project uses an **E-Commerce Public Dataset**, including:
+Dataset yang digunakan adalah **E-Commerce Public Dataset**, yang terdiri dari:
 - Orders
-- Order items
+- Order Items
 - Payments
 - Customers
 - Products
-- Product category translation
+- Product Category Translation
 
-Product categories were normalized by translating Portuguese category names
-into English as part of the data preparation process.
+Pada tahap persiapan data, nama kategori produk dalam bahasa Portugis
+dinormalisasi ke bahasa Inggris menggunakan dataset terjemahan kategori.
 
 ---
 
-## 🔄 Data Analysis Workflow
+## 🔄 Alur Analisis Data
 
-The analysis follows an end-to-end data analytics process:
+Proses analisis dilakukan secara end-to-end dengan tahapan berikut:
 
 1. **Data Gathering**
-   - Load raw CSV datasets
+   - Memuat seluruh dataset CSV ke dalam notebook
 
-2. **Data Preparation**
-   - Normalize product category names using translation mapping
-   - Handle missing values
-   - Prepare clean datasets for analysis
+2. **Data Wrangling**
+   - *Assessing Data*: Pengecekan missing value, nama kategori produk, dan jumlah kategori produk
+   - *Cleaning Data*: normalisasi nama kategori produk dan penanganan nilai kosong
 
-3. **Exploratory & Descriptive Analysis**
-   - Analyze order volume and revenue trends
-   - Evaluate product category performance
-   - Perform customer analysis using RFM (Recency, Frequency, Monetary)
+3. **Exploratory Data Analysis (EDA)**
+   - Analisis tren jumlah pesanan dan pendapatan per bulan
+   - Analisis kontribusi kategori produk terhadap pendapatan
+   - Analisis perilaku pelanggan menggunakan pendekatan RFM
 
-4. **Insight Generation**
-   - Identify overall business performance trends
-   - Understand customer purchasing behavior
+4. **Visualization & Explanatory Analysis**
+   - Menyajikan hasil analisis dalam bentuk visualisasi yang mudah dipahami
 
 5. **Dashboard Development**
-   - Build an interactive dashboard using Streamlit
-   - Visualize monthly orders and revenue trends
+   - Menyusun dashboard interaktif menggunakan Streamlit
+   - Dataset hasil agregasi (main_data.csv) digunakan sebagai sumber data utama dashboard
 
 ---
 
 ## 📊 Dashboard
 
-The dashboard provides:
+Dashboard menampilkan informasi berikut:
 - Total Orders
 - Total Revenue
-- Average Orders per Month
-- Average Revenue per Month
-- Monthly trend visualization for orders and revenue
-- Date range filter for flexible analysis
+- Rata-rata Orders per Bulan
+- Rata-rata Revenue per Bulan
+- Tren bulanan Orders dan Revenue
+- Filter rentang waktu
 
 ### Dashboard Preview
 ![Dashboard](./dashboard/dashboard.png)
 
 ---
 
-## 🚀 How to Run the Dashboard
+## 🚀 Jalankan Dashboard di Google Colab
 
-1. Install dependencies:
+1. Install:
    ```bash
-   pip install -r requirements.txt
+   !pip install streamlit pyngrok
 
-2. Run the Streamlit app:
+2. Konfigurasi:
    ```bash
-   streamlit run dashboard/dashboard.py
+   !streamlit run /content/dashboard/dashboard.py &>/content/logs.txt &
+
+2. Running:
+   ```bash
+   from pyngrok import ngrok
+    ngrok.set_auth_token("ISI-DENGAN_AUTHTOKEN_PYNGROK")
+    public_url = ngrok.connect(8501)
+    public_url
 
 ---
 
-## 🗂️ Submission Structure
+## 🗂️ Struktur Submission
 
 ```
 submissions
 ├── dashboard/
 |   ├── dashboard.py
-|   ├── dashboard.png
 |   └── main_data.csv
 ├── data/                                          
 |   ├── customers_dataset.csv
@@ -92,28 +97,10 @@ submissions
 |   ├── products_dataset_clean.csv
 |   └── products_dataset.csv
 ├── 01_data_preparation.ipynb
-├── 02_notebook.ipynb
-├── 03_dashboard.ipynb
 ├── requirements.txt
 └── README.md
 ```
 
----
-
-## 📝 Notes
-- The analysis is performed in a Colab Notebook (.ipynb)
-- The dashboard script (.py) is designed to be executed in a local environment
-- The dashboard screenshot is provided as part of the submission
-
----
-
-## ✅ Conclusion
-
-This project demonstrates the complete data analysis process,
-from raw data preparation to insight delivery through an interactive dashboard.
-```bash
-  https://circuital-caitlyn-convolutely.ngrok-free.dev/
-```
 ---
 
 ## ✍️ Author
@@ -122,8 +109,3 @@ from raw data preparation to insight delivery through an interactive dashboard.
 Submission Dicoding - Proyek Analisis Data
 
 📧 **br.wibisono@gmail.com**
-
-
-
-
-
