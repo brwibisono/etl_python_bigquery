@@ -11,6 +11,15 @@ import os
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+def format_revenue(x, pos):
+    if x >= 1_000_000:
+        return f"{x/1_000_000:.1f}M"
+    elif x >= 1_000:
+        return f"{x/1_000:.0f}K"
+    else:
+        return str(int(x))
 
 # Page Configuration
 st.set_page_config(
@@ -83,13 +92,18 @@ top10_product = (
 )
 
 fig1, ax1 = plt.subplots(figsize=(8, 5))
+
 ax1.barh(
     top10_product["product_category_name"][::-1],
     top10_product["total_revenue"][::-1]
 )
+
 ax1.set_xlabel("Total Revenue")
 ax1.set_ylabel("Product Category")
 ax1.set_title("Top Product Categories by Revenue")
+
+# Custom formatting (jutaan / ribuan)
+ax1.xaxis.set_major_formatter(FuncFormatter(format_revenue))
 
 st.pyplot(fig1)
 
