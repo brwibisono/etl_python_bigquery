@@ -35,21 +35,23 @@ product_revenue["order_date"] = pd.to_datetime(product_revenue["order_date"])
 
 st.sidebar.header("Filter Tanggal")
 
-min_date = main_data["order_date"].min()
-max_date = main_data["order_date"].max()
+min_date = main_data["order_date"].min().date()
+max_date = main_data["order_date"].max().date()
 
 start_date = st.sidebar.date_input(
     "Tanggal Mulai",
     value=min_date,
     min_value=min_date,
-    max_value=max_date
+    max_value=max_date,
+    key="start_date_picker"
 )
 
 end_date = st.sidebar.date_input(
     "Tanggal Akhir",
     value=max_date,
     min_value=min_date,
-    max_value=max_date
+    max_value=max_date,
+    key="end_date_picker"
 )
 
 if start_date > end_date:
