@@ -69,6 +69,30 @@ Dashboard hanya menggunakan dataset hasil agregasi tanpa melakukan analisis ulan
 
 ---
 
+## 🚀 Jalankan Dashboard di Google Colab
+ 
+1. Install:
+   ```bash
+   !pip install streamlit pyngrok
+ 
+2. Konfigurasi:
+   ```bash
+   !streamlit run /content/dashboard/dashboard.py &>/content/logs.txt &
+ 
+2. Running:
+   ```bash
+   from pyngrok import ngrok
+    ngrok.set_auth_token("ISI-DENGAN_AUTHTOKEN_PYNGROK")
+    public_url = ngrok.connect(8501)
+    public_url
+
+ Notes: Token PYNGROK bisa didapatkan pada halaman
+   ```bash
+   https://dashboard.ngrok.com/get-started/your-authtoken
+   ```
+
+---
+
 ## 🗂️ Struktur Submission
 
 ```
