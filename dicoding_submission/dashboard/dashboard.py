@@ -33,18 +33,23 @@ product_revenue = pd.read_csv(os.path.join(BASE_DIR, "product_revenue.csv"))
 main_data["order_date"] = pd.to_datetime(main_data["order_date"])
 product_revenue["order_date"] = pd.to_datetime(product_revenue["order_date"])
 
-# Sidebar Filter (Date-based)
 st.sidebar.header("Filter Tanggal")
 
-min_date = main_data["order_date"].min().date()
-max_date = main_data["order_date"].max().date()
+min_date = main_data["order_date"].min()
+max_date = main_data["order_date"].max()
 
-start_date, end_date = st.sidebar.date_input(
+date_range = st.sidebar.date_input(
     "Pilih Rentang Tanggal",
     value=(min_date, max_date),
     min_value=min_date,
     max_value=max_date
 )
+
+if isinstance(date_range, tuple):
+    start_date, end_date = date_range
+else:
+    start_date = min_date
+    end_date = max_date
 
 # Apply Filter
 filtered_main_data = main_data[
