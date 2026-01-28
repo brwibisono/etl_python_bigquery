@@ -38,18 +38,23 @@ st.sidebar.header("Filter Tanggal")
 min_date = main_data["order_date"].min()
 max_date = main_data["order_date"].max()
 
-date_range = st.sidebar.date_input(
-    "Pilih Rentang Tanggal",
-    value=(min_date, max_date),
+start_date = st.sidebar.date_input(
+    "Tanggal Mulai",
+    value=min_date,
     min_value=min_date,
     max_value=max_date
 )
 
-if isinstance(date_range, tuple):
-    start_date, end_date = date_range
-else:
-    start_date = min_date
-    end_date = max_date
+end_date = st.sidebar.date_input(
+    "Tanggal Akhir",
+    value=max_date,
+    min_value=min_date,
+    max_value=max_date
+)
+
+if start_date > end_date:
+    st.sidebar.error("Tanggal mulai tidak boleh lebih besar dari tanggal akhir.")
+    st.stop()
 
 # Apply Filter
 filtered_main_data = main_data[
