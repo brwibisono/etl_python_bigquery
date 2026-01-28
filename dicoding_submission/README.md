@@ -61,28 +61,11 @@ Dashboard hanya menggunakan dataset hasil agregasi tanpa melakukan analisis ulan
 
 ---
 
-## 🚀 Menjalankan Dashboard
+## 🚀 Melihat Dashboard
 
-1. Install dependencies:
+1. Streamlit Cloud:
    ```bash
-   pip install -r requirements.txt
-
-## 🚀 Jalankan Dashboard di Google Colab
-
-1. Install:
-   ```bash
-   !pip install streamlit pyngrok
-
-2. Konfigurasi:
-   ```bash
-   !streamlit run /content/dashboard/dashboard.py &>/content/logs.txt &
-
-2. Running:
-   ```bash
-   from pyngrok import ngrok
-    ngrok.set_auth_token("ISI-DENGAN_AUTHTOKEN_PYNGROK")
-    public_url = ngrok.connect(8501)
-    public_url
+   https://brwibisono-dicodingsubmission2.streamlit.app/
 
 ---
 
@@ -93,7 +76,8 @@ submissions
 ├── dashboard/
 |   ├── dashboard.py
 |   ├── main_data.csv
-|   └── product_revenue.csv
+|   ├── product_revenue.csv
+|   └── requirements.txt
 ├── data/                                          
 |   ├── customers_dataset.csv
 |   ├── order_items_dataset.csv
@@ -104,6 +88,7 @@ submissions
 |   └── products_dataset.csv
 ├── Proyek_Analisi_Data.ipynb
 ├── requirements.txt
+├── url.txt
 └── README.md
 ```
 
