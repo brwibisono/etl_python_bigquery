@@ -43,7 +43,7 @@ Proses analisis dilakukan secara end-to-end dengan tahapan berikut:
 
 5. **Dashboard Development**
    - Menyusun dashboard interaktif menggunakan Streamlit
-   - Dataset hasil agregasi (main_data.csv) digunakan sebagai sumber data utama dashboard
+   - Dataset hasil agregasi (main_data.csv) digunakan sebagai salah satu sumber data utama dashboard
 
 ---
 
@@ -86,9 +86,9 @@ Dashboard menampilkan informasi berikut:
 ```
 submissions
 ├── dashboard/
-|   ├── dashboard.png
 |   ├── dashboard.py
-|   └── main_data.csv
+|   ├── main_data.csv
+|   └── product_revenue.csv
 ├── data/                                          
 |   ├── customers_dataset.csv
 |   ├── order_items_dataset.csv
