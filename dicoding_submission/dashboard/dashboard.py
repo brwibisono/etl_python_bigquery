@@ -20,36 +20,55 @@ st.set_page_config(
 
 st.title("E-Commerce Revenue Dashboard (2017–2018)")
 st.write(
-    "Visualisasi untuk menjawab pertanyaan bisnis terkait kontribusi kategori produk dan tren pendapatan bulanan."
+    "Dashboard interaktif untuk menganalisis kontribusi kategori produk "
+    "dan tren pendapatan bisnis berdasarkan rentang tanggal."
 )
+
 # Load Data
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 main_data = pd.read_csv(os.path.join(BASE_DIR, "main_data.csv"))
 product_revenue = pd.read_csv(os.path.join(BASE_DIR, "product_revenue.csv"))
 
-# Sidebar Filter (Interactivity)
-st.sidebar.header("Filter Data")
+main_data["order_date"] = pd.to_datetime(main_data["order_date"])
+product_revenue["order_date"] = pd.to_datetime(product_revenue["order_date"])
 
-available_months = sorted(main_data["order_month"].unique())
-selected_month = st.sidebar.selectbox(
-    "Pilih Bulan",
-    options=["Semua"] + available_months
+# Sidebar Filter (Date-based)
+st.sidebar.header("Filter Tanggal")
+
+min_date = main_data["order_date"].min().date()
+max_date = main_data["order_date"].max().date()
+
+start_date, end_date = st.sidebar.date_input(
+    "Pilih Rentang Tanggal",
+    value=(min_date, max_date),
+    min_value=min_date,
+    max_value=max_date
 )
 
-if selected_month != "Semua":
-    filtered_main_data = main_data[
-        main_data["order_month"] == selected_month
-    ]
-else:
-    filtered_main_data = main_data.copy()
+# Apply Filter
+filtered_main_data = main_data[
+    (main_data["order_date"].dt.date >= start_date) &
+    (main_data["order_date"].dt.date <= end_date)
+]
+
+filtered_product_revenue = product_revenue[
+    (product_revenue["order_date"].dt.date >= start_date) &
+    (product_revenue["order_date"].dt.date <= end_date)
+]
 
 # Business Question 1
 st.subheader(
-    "Kategori Produk Kontributor Utama Pendapatan (2017–2018)"
+    "Kategori Produk dengan Kontribusi Pendapatan Tertinggi"
 )
 
-top10_product = product_revenue.head(10)
+top10_product = (
+    filtered_product_revenue
+    .groupby("product_category_name", as_index=False)
+    .agg(total_revenue=("total_revenue", "sum"))
+    .sort_values("total_revenue", ascending=False)
+    .head(10)
+)
 
 fig1, ax1 = plt.subplots(figsize=(8, 5))
 ax1.barh(
@@ -58,63 +77,48 @@ ax1.barh(
 )
 ax1.set_xlabel("Total Revenue")
 ax1.set_ylabel("Product Category")
-ax1.set_title(
-    "Top Product Categories by Revenue Contribution (2017–2018)"
-)
+ax1.set_title("Top Product Categories by Revenue")
 
 st.pyplot(fig1)
 
-st.markdown(
-    """
-    **Insight:**
-    - Pendapatan bisnis terkonsentrasi pada beberapa kategori produk utama
-      yang menjadi kontributor terbesar selama periode analisis.
-    """
-)
-
 # Business Question 2
 st.subheader(
-    "Tren Pendapatan Bisnis Bulanan (2017–2018)"
+    "Tren Pendapatan Bisnis Berdasarkan Waktu"
+)
+
+daily_revenue = (
+    filtered_main_data
+    .groupby("order_date", as_index=False)
+    .agg(total_revenue=("total_revenue", "sum"))
 )
 
 fig2, ax2 = plt.subplots(figsize=(10, 4))
 ax2.plot(
-    filtered_main_data["order_month"],
-    filtered_main_data["total_revenue"],
-    marker="o"
+    daily_revenue["order_date"],
+    daily_revenue["total_revenue"]
 )
-ax2.set_xlabel("Order Month")
+ax2.set_xlabel("Order Date")
 ax2.set_ylabel("Total Revenue")
-ax2.set_title("Monthly Revenue Trend (2017–2018)")
-plt.xticks(rotation=45)
+ax2.set_title("Daily Revenue Trend")
 
 st.pyplot(fig2)
-
-st.markdown(
-    """
-    **Insight:**
-    - Pendapatan bisnis menunjukkan tren pertumbuhan dari bulan ke bulan
-      selama 2017–2018, meskipun terdapat fluktuasi pada beberapa periode.
-    """
-)
 
 # Conclusion
 st.subheader("Kesimpulan")
 
 st.markdown(
     """
-    - Kategori produk tertentu menjadi pendorong utama pendapatan bisnis,
-      sehingga fokus pada kategori unggulan berpotensi memberikan dampak
-      terbesar terhadap kinerja pendapatan.
-    - Tren pendapatan bulanan menunjukkan pertumbuhan yang positif, yang
-      menegaskan pentingnya pemantauan kinerja bisnis secara berkala.
+    - Kontribusi pendapatan bisnis didominasi oleh beberapa kategori produk utama,
+      dan komposisi ini dapat berubah tergantung rentang tanggal yang dianalisis.
+    - Tren pendapatan menunjukkan fluktuasi dari hari ke hari, sehingga analisis
+      berbasis tanggal membantu memahami dinamika performa bisnis secara lebih detail.
     """
 )
 
 st.markdown(
     """
-    **Bramantya Wibisono**
-    | Submission Dicoding - Proyek Analisis Data
-    | **br.wibisono@gmail.com**
+    **Bramantya Wibisono**  
+    Submission Dicoding – Proyek Analisis Data  
+    **br.wibisono@gmail.com**
     """
 )
