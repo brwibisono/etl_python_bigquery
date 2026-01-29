@@ -90,10 +90,9 @@ Dashboard hanya menggunakan dataset hasil agregasi tanpa melakukan analisis ulan
    streamlit run dashboard.py
    
 5. Final:
-   ```bash
    ![http://localhost:8501/](./dashboard/terminal.png)
 
- Notes: Saya menggunakan ekosistem mac, biasanya jika awal akan diminta install `command line developer tools` 
+ Notes: Saya menggunakan ekosistem mac, biasanya jika awal akan diminta install `command line developer tools` dan jika sudah sukses seperti gambar di atas bisa langsung masuk ke `http://localhost:8501/`
 
 ---
 
@@ -105,7 +104,8 @@ submissions
 |   ├── dashboard.py
 |   ├── main_data.csv
 |   ├── product_revenue.csv
-|   └── requirements.txt
+|   ├── requirements.txt
+|   └── terminal.png
 ├── data/                                          
 |   ├── customers_dataset.csv
 |   ├── order_items_dataset.csv
