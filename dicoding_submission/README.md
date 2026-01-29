@@ -69,27 +69,31 @@ Dashboard hanya menggunakan dataset hasil agregasi tanpa melakukan analisis ulan
 
 ---
 
-## 🚀 Jalankan Dashboard di Google Colab
+## 🚀 Jalankan Dashboard di local
  
-1. Install:
+1. Preparation:
    ```bash
-   !pip install streamlit pyngrok
+   cd /Users/brwibisono/Desktop/submission/dashboard
  
-2. Konfigurasi:
+2. Buat Virtual Environment:
    ```bash
-   !streamlit run /content/dashboard/dashboard.py &>/content/logs.txt &
+   python3 -m venv venv
+   source venv/bin/activate
  
-2. Running:
+3. Install Library:
    ```bash
-   from pyngrok import ngrok
-    ngrok.set_auth_token("ISI-DENGAN_AUTHTOKEN_PYNGROK")
-    public_url = ngrok.connect(8501)
-    public_url
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   
+4. Running:
+   ```bash
+   streamlit run dashboard.py
+   
+5. Final:
+   ```bash
+   ![http://localhost:8501/](./dashboard/terminal.png)
 
- Notes: Token PYNGROK bisa didapatkan pada halaman
-   ```bash
-   https://dashboard.ngrok.com/get-started/your-authtoken
-   ```
+ Notes: Saya menggunakan ekosistem mac, biasanya jika awal akan diminta install `command line developer tools` 
 
 ---
 
