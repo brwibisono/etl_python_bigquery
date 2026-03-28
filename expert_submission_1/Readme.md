@@ -152,7 +152,7 @@ Dashboard dapat diakses di sini:
 
 🖼️ Dashboard Preview
 
-![HR Attrition Dashboard](./expert_submission_1/dashboard.png)
+![HR Attrition Dashboard](./dashboard.png)
 
 
 🚀 How to Reproduce
