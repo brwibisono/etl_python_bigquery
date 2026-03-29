@@ -443,6 +443,12 @@ Dengan implementasi rekomendasi di atas, institusi dapat:
 
 ---
 
+## Video Singkat + tangkapan layar
+
+🎥 Video
+
+![Student's Dropout Dasboard](./media/<brwibisono>.video.mov)
+
 ## ✍️ Author
 **Bramantya Wibisono**
 
