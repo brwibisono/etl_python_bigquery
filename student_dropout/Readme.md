@@ -79,7 +79,8 @@ submission
 |   ├── <brwibisono>.ml_1.png
 |   ├── <brwibisono>.ml_2.png
 |   ├── <brwibisono>.ml_3.png
-|   └── <brwibisono>.ml_4.png
+|   ├── <brwibisono>.ml_4.png
+|   └── <brwibisono>.video.mov
 ├── app.py/                                          
 ├── notebook.ipynb
 ├── requirements.txt
@@ -445,9 +446,7 @@ Dengan implementasi rekomendasi di atas, institusi dapat:
 
 ## Video Singkat + tangkapan layar
 
-🎥 Video
-
-![Student's Dropout Dasboard](./media/<brwibisono>.video.mov)
+🎥 Video bisa akses ke [Link Berikut](https://drive.google.com/file/d/1RzUNQ7D4gmgB37y3KibLfrz5M8E042Bd/view?usp=sharing)
 
 ## ✍️ Author
 **Bramantya Wibisono**
