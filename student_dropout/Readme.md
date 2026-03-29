@@ -171,16 +171,146 @@ Langkah deployment:
 
 ---
 
-### Business Dashboard
+### Business Dashboard: Student Dropout Risk Monitoring
+
+Dashboard ini dirancang untuk membantu institusi pendidikan dalam memonitor dan memahami risiko dropout mahasiswa secara menyeluruh, berbasis data akademik, finansial, dan profil mahasiswa.
+
+Dashboard menggunakan pendekatan **descriptive & diagnostic analytics**, sehingga tidak hanya menampilkan kondisi saat ini, tetapi juga membantu mengidentifikasi faktor penyebab utama dropout.
+
+
+## 1. Ringkasan Utama (KPI)
+
+Pada bagian atas dashboard ditampilkan metrik utama:
+
+- **Total Mahasiswa**: 4,424 Mahasiswa
+- **Jumlah Dropout**: 1,421 Mahasiswa
+- **Dropout Rate**: 32.12%
+
+Insight utama:
+- Tingkat dropout tergolong cukup tinggi (>30%)
+- Menunjukkan adanya kebutuhan intervensi akademik dan finansial
+
+
+## 2. Distribusi Status Mahasiswa
+
+Visualisasi "Students Dropout" menunjukkan distribusi:
+
+- Graduate (mayoritas)
+- Dropout
+- Enrolled
+
+Insight:
+- Walaupun mayoritas lulus, proporsi dropout masih signifikan
+- Perlu fokus pada segment mahasiswa berisiko
+
+
+## 3. Analisis Status Pembayaran (Tuition Status)
+
+Visualisasi menunjukkan hubungan antara:
+
+- Status pembayaran (Up to Date vs Outstanding)
+- Status mahasiswa (Dropout / Graduate / Enrolled)
+
+Insight utama:
+- Mahasiswa dengan **pembayaran tidak lancar (Outstanding)** memiliki proporsi dropout lebih tinggi
+- Faktor finansial merupakan indikator kuat risiko dropout
+
+
+## 4. Academic Performance Analysis
+
+Bagian ini menganalisis:
+
+- Admission grade (Low, Good, Excellent)
+- Rata-rata nilai semester 1 dan 2
+
+Insight utama:
+- Mahasiswa dengan admission grade rendah memiliki risiko dropout lebih tinggi
+- Rata-rata nilai mahasiswa dropout lebih rendah dibanding graduate
+- Performa akademik awal (semester 1) menjadi indikator penting
+
+
+## 5. Age Group Analysis
+
+Distribusi mahasiswa berdasarkan usia:
+
+- 21–25 tahun
+- 26–30 tahun
+
+Insight:
+- Kelompok usia tertentu menunjukkan variasi risiko dropout
+- Dapat digunakan untuk segmentasi intervensi
+
+
+## 6. Debtor vs Dropout
+
+Analisis hubungan antara:
+
+- Status hutang mahasiswa
+- Jumlah dropout
+
+Insight:
+- Mahasiswa dengan status debtor cenderung memiliki risiko dropout lebih tinggi
+- Kombinasi faktor finansial + akademik meningkatkan risiko
+
+
+## 7. Scholarship Analysis
+
+Analisis perbandingan:
+
+- Mahasiswa penerima beasiswa
+- Non-penerima
+
+Insight:
+- Beasiswa berpotensi menjadi faktor protektif terhadap dropout
+- Mahasiswa tanpa dukungan finansial lebih rentan
+
+---
+
+## Key Business Insights
+
+Dari keseluruhan dashboard, terdapat beberapa insight utama:
+
+1. **Faktor finansial adalah driver utama dropout**
+   - Status pembayaran dan hutang sangat berpengaruh
+
+2. **Performa akademik awal sangat krusial**
+   - Nilai semester 1 menjadi indikator kuat
+
+3. **Dropout bukan hanya masalah akademik**
+   - Kombinasi faktor finansial + performa
+
+---
+
+## Business Recommendation
+
+Berdasarkan analisis dashboard:
+
+ - Prioritaskan monitoring mahasiswa dengan:
+ - Nilai rendah di semester awal
+ - Status pembayaran bermasalah
+ - Tingkatkan program bantuan finansial / beasiswa
+ - Implementasikan sistem early warning berbasis data
+ - Lakukan intervensi akademik sejak semester pertama
+
+---
+
+## Value untuk Institusi
+
+Dashboard ini membantu:
+
+- Mengidentifikasi mahasiswa berisiko lebih cepat
+- Mendukung pengambilan keputusan berbasis data
+- Meningkatkan retention rate mahasiswa
+- Mengoptimalkan strategi akademik dan finansial
 
 Dashboard dapat diakses di sini:
 
 🔗 Tableau Public
-[Student's Dropout Dasboard](https://public.tableau.com/app/profile/brwibisono/viz/)
+[Student's Dropout Dasboard](https://public.tableau.com/app/profile/brwibisono/viz/StudentDropoutRisk/Dashboard?publish=yes)
 
 🖼️ Dashboard Preview
 
-![Student's Dropout Dasboard](./media/<brwibisono>dashboard.png)
+![Student's Dropout Dasboard](./media/<brwibisono>.dashboard.png)
 
 ---
 
