@@ -15,8 +15,8 @@ st.title("🎓 Prediksi Dropout Mahasiswa")
 st.markdown("Dashboard interaktif untuk memprediksi risiko mahasiswa dropout by Bramantya Wibisono")
 
 # LOAD MODEL
-model = joblib.load("/model/student_dropout_model.pkl")
-feature_columns = joblib.load("/model/model_features.pkl")
+model = joblib.load("model/student_dropout_model.pkl")
+feature_columns = joblib.load("model/model_features.pkl")
 
 # TABS
 tab1, tab2 = st.tabs(
