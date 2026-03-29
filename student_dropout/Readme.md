@@ -74,12 +74,12 @@ submission
 ├── model/
 |   ├── student_dropout_model.pkl
 |   └── model_features.pkl
-├── model/
-|   ├── <brwibisono>.dashboard.tsv
-|   ├── <brwibisono>.ml_1.tsv
-|   ├── <brwibisono>.ml_2.tsv
-|   ├── <brwibisono>.ml_3.tsv
-|   └── <brwibisono>.ml_4.tsv
+├── media/
+|   ├── <brwibisono>.dashboard.png
+|   ├── <brwibisono>.ml_1.png
+|   ├── <brwibisono>.ml_2.png
+|   ├── <brwibisono>.ml_3.png
+|   └── <brwibisono>.ml_4.png
 ├── app.py/                                          
 ├── notebook.ipynb
 ├── requirements.txt
@@ -160,12 +160,12 @@ Langkah deployment:
 
 1. Load file `.tsv` ke tableau desktop
 2. Build sheet sesuai kebutuhan
-3. Combine sheet ke dalam satu dashboard
+3. Combine sheet ke dalam dashboard
 4. Buat filter
 5. Unggah ke Tableau Public
 
 ⚠️ Catatan Penting
-- Path model harus sesuai dengan struktur repository `(misal: student_dropout/model/...)`
+- Path model harus sesuai dengan struktur repository di Github `(misal repo github saya : student_dropout/model/...)`
 - File `.pkl` harus benar-benar ter-upload ke GitHub (bukan empty file)
 - Format dataset untuk Tableau menggunakan `.tsv` agar lebih stabil
 
