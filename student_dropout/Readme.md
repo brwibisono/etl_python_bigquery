@@ -446,7 +446,7 @@ Dengan implementasi rekomendasi di atas, institusi dapat:
 
 ## Video Singkat + tangkapan layar
 
-🎥 Video bisa akses ke [Link Berikut](https://drive.google.com/file/d/1RzUNQ7D4gmgB37y3KibLfrz5M8E042Bd/view?usp=sharing)
+🎥 Video bisa akses ke [Link Berikut](https://drive.google.com/file/d/1nMU40HuLoBPUxKx0PE_Jyjx-2AyRF8Q_/view?usp=sharing)
 
 ## ✍️ Author
 **Bramantya Wibisono**
