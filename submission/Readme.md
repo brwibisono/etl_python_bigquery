@@ -187,9 +187,9 @@ Dashboard menggunakan pendekatan **descriptive & diagnostic analytics**, sehingg
 
 Pada bagian atas dashboard ditampilkan metrik utama:
 
-- **Total Mahasiswa**: 4,424 Mahasiswa
+- **Total Mahasiswa**: 3,630 Mahasiswa
 - **Jumlah Dropout**: 1,421 Mahasiswa
-- **Dropout Rate**: 32.12%
+- **Dropout Rate**: 39.15%
 
 Insight utama:
 - Tingkat dropout tergolong cukup tinggi (>30%)
@@ -341,21 +341,75 @@ Dan hasil dari data prediksi ke 4 dapat di download berupa file `.csv`
 
 ### Conclusion
 
-Berdasarkan analisis data dan pengembangan model machine learning, dapat disimpulkan bahwa risiko dropout mahasiswa di Jaya Jaya Institut dipengaruhi oleh kombinasi faktor akademik dan finansial.
+Berdasarkan hasil analisis dan pengembangan model machine learning, kesimpulan pada proyek ini dibagi menjadi dua bagian utama:
 
-Dari sisi akademik, performa mahasiswa pada semester awal (khususnya nilai dan jumlah mata kuliah yang lulus) menjadi indikator paling kuat terhadap kemungkinan dropout. Mahasiswa dengan nilai rendah cenderung memiliki risiko yang jauh lebih tinggi untuk tidak menyelesaikan studi.
+---
 
-Dari sisi finansial, status pembayaran dan kondisi hutang (debtor) juga menunjukkan pengaruh signifikan. Mahasiswa dengan pembayaran yang tidak lancar atau memiliki hutang memiliki kecenderungan dropout yang lebih tinggi dibandingkan mahasiswa yang kondisi finansialnya stabil.
+### 1. Kesimpulan Analisis Data (EDA & Dashboard)
 
-Model machine learning yang dibangun berhasil mengidentifikasi pola tersebut dan dapat digunakan sebagai **early warning system** untuk memprediksi risiko dropout secara individual maupun massal.
+Berdasarkan eksplorasi data dan visualisasi dashboard, risiko dropout mahasiswa di Jaya Jaya Institut dipengaruhi oleh kombinasi faktor akademik dan finansial.
 
-Selain itu, dashboard yang dikembangkan memberikan visibilitas yang jelas terhadap distribusi risiko dan faktor-faktor utama, sehingga memudahkan stakeholder dalam memahami kondisi dan mengambil keputusan.
+**Faktor utama yang berkaitan dengan dropout:**
 
-Dengan kombinasi analisis data, dashboard, dan sistem prediksi interaktif, institusi kini memiliki fondasi yang kuat untuk:
+- **Performa akademik awal**
+  - Nilai semester 1 dan 2 menjadi indikator paling kuat
+  - Mahasiswa dengan nilai rendah memiliki risiko dropout lebih tinggi
 
-- mendeteksi mahasiswa berisiko lebih awal,
-- melakukan intervensi yang lebih tepat,
-- serta meningkatkan tingkat kelulusan secara keseluruhan.
+- **Status pembayaran (tuition fees)**
+  - Mahasiswa dengan pembayaran tidak lancar cenderung memiliki risiko lebih tinggi
+
+- **Status hutang (debtor)**
+  - Mahasiswa yang memiliki hutang menunjukkan kecenderungan dropout lebih besar
+
+- **Beasiswa (scholarship)**
+  - Beasiswa berperan sebagai faktor protektif terhadap dropout
+
+Insight ini menunjukkan bahwa dropout bukan hanya dipengaruhi oleh faktor akademik, tetapi juga sangat dipengaruhi oleh kondisi finansial mahasiswa.
+
+---
+
+### 2. Kesimpulan Model Machine Learning
+
+Model yang digunakan dalam proyek ini adalah **Random Forest Classifier** yang dilatih untuk memprediksi probabilitas mahasiswa mengalami dropout.
+
+**Performa model:**
+- Accuracy  : 88.98%
+- Precision : 88.64%
+- Recall    : 82.39%
+- F1-score  : 85.40%
+
+Model ini mampu mengidentifikasi pola risiko dropout dengan cukup baik dan dapat digunakan sebagai sistem prediksi awal (early warning system).
+
+**Fitur yang digunakan dalam model (8 fitur utama):**
+- Admission_grade  
+- Age_at_enrollment  
+- Tuition_fees_up_to_date  
+- Scholarship_holder  
+- Debtor  
+- Curricular_units_1st_sem_approved  
+- Curricular_units_1st_sem_grade  
+- Curricular_units_2nd_sem_grade  
+
+**Fitur yang paling berpengaruh terhadap prediksi (berdasarkan domain & model behavior):**
+- Performa akademik semester 1 dan 2
+- Status pembayaran UKT
+- Status hutang mahasiswa
+
+---
+
+### Ringkasan
+
+Dengan menggabungkan:
+- analisis data (EDA),
+- dashboard monitoring,
+- serta model machine learning,
+
+institusi kini memiliki pendekatan berbasis data untuk:
+- mendeteksi mahasiswa berisiko sejak dini,
+- memahami faktor penyebab utama dropout,
+- serta mendukung pengambilan keputusan yang lebih tepat dan terukur.
+
+Model yang dibangun juga telah disesuaikan dengan aplikasi Streamlit menggunakan fitur yang konsisten antara tahap training dan deployment, sehingga hasil prediksi lebih valid dan dapat digunakan secara praktis.
 
 
 ## Rekomendasi Action Items
