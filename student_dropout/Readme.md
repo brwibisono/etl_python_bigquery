@@ -336,7 +336,118 @@ Dan hasil dari data prediksi ke 4 dapat di download berupa file `.csv`
 
 ### Conclusion
 
-## rekomendasi action items
+Berdasarkan analisis data dan pengembangan model machine learning, dapat disimpulkan bahwa risiko dropout mahasiswa di Jaya Jaya Institut dipengaruhi oleh kombinasi faktor akademik dan finansial.
 
-   
+Dari sisi akademik, performa mahasiswa pada semester awal (khususnya nilai dan jumlah mata kuliah yang lulus) menjadi indikator paling kuat terhadap kemungkinan dropout. Mahasiswa dengan nilai rendah cenderung memiliki risiko yang jauh lebih tinggi untuk tidak menyelesaikan studi.
+
+Dari sisi finansial, status pembayaran dan kondisi hutang (debtor) juga menunjukkan pengaruh signifikan. Mahasiswa dengan pembayaran yang tidak lancar atau memiliki hutang memiliki kecenderungan dropout yang lebih tinggi dibandingkan mahasiswa yang kondisi finansialnya stabil.
+
+Model machine learning yang dibangun berhasil mengidentifikasi pola tersebut dan dapat digunakan sebagai **early warning system** untuk memprediksi risiko dropout secara individual maupun massal.
+
+Selain itu, dashboard yang dikembangkan memberikan visibilitas yang jelas terhadap distribusi risiko dan faktor-faktor utama, sehingga memudahkan stakeholder dalam memahami kondisi dan mengambil keputusan.
+
+Dengan kombinasi analisis data, dashboard, dan sistem prediksi interaktif, institusi kini memiliki fondasi yang kuat untuk:
+
+- mendeteksi mahasiswa berisiko lebih awal,
+- melakukan intervensi yang lebih tepat,
+- serta meningkatkan tingkat kelulusan secara keseluruhan.
+
+
+## Rekomendasi Action Items
+
+Berdasarkan hasil analisis dan model prediksi, berikut beberapa rekomendasi strategis yang dapat diterapkan oleh institusi:
+
+---
+
+### 1. Implementasi Early Warning System
+
+Gunakan model machine learning sebagai sistem deteksi dini untuk:
+
+- mengidentifikasi mahasiswa dengan risiko dropout tinggi sejak awal semester
+- memprioritaskan mahasiswa yang membutuhkan intervensi
+
+➡️ Implementasi:
+- integrasikan model ke sistem akademik
+- monitoring rutin (mingguan/bulanan)
+
+---
+
+### 2. Intervensi Akademik di Semester Awal
+
+Performa semester 1 terbukti menjadi indikator kuat dropout.
+
+➡️ Action:
+- program mentoring / tutoring untuk mahasiswa dengan nilai rendah
+- evaluasi berkala performa akademik
+- kelas remedial lebih awal
+
+---
+
+### 3. Monitoring dan Dukungan Finansial
+
+Faktor finansial (tuition & debtor) memiliki pengaruh signifikan.
+
+➡️ Action:
+- sistem alert untuk mahasiswa dengan pembayaran bermasalah
+- opsi cicilan atau restrukturisasi pembayaran
+- perluasan program beasiswa / bantuan
+
+---
+
+### 4. Segmentasi Mahasiswa Berisiko
+
+Tidak semua mahasiswa perlu diperlakukan sama.
+
+➡️ Action:
+- segmentasi berdasarkan:
+  - performa akademik
+  - status finansial
+  - usia / profil
+- buat strategi intervensi yang lebih targeted
+
+---
+
+### 5. Dashboard Monitoring untuk Stakeholder
+
+Gunakan dashboard sebagai alat monitoring rutin.
+
+➡️ Action:
+- digunakan oleh:
+  - akademik
+  - keuangan
+  - manajemen
+- review performa mahasiswa secara periodik
+- gunakan data untuk decision-making
+
+---
+
+### 6. Continuous Model Improvement
+
+Model perlu terus diperbarui agar tetap relevan.
+
+➡️ Action:
+- retrain model setiap periode (semester/tahun)
+- tambahkan variabel baru jika tersedia
+- evaluasi performa model secara berkala
+
+---
+
+## Expected Impact
+
+Dengan implementasi rekomendasi di atas, institusi dapat:
+
+- meningkatkan tingkat kelulusan mahasiswa
+- mengurangi angka dropout secara signifikan
+- mengoptimalkan intervensi akademik dan finansial
+- mengambil keputusan berbasis data, bukan asumsi
+
+---
+
+## ✍️ Author
+**Bramantya Wibisono**
+
+Submission Akhir: Menyelesaikan Permasalahan Institusi Pendidikan
+
+📧 **br.wibisono@gmail.com**
+
 
