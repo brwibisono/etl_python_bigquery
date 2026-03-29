@@ -57,7 +57,7 @@ Proyek ini dikembangkan menggunakan kombinasi Python (untuk data preparation & m
 
 Proyek ini dijalankan menggunakan:
 
-- **Python 3.12.13+** (Google Colab environment)
+- **Python 3.12.13** (Google Colab environment)
 - **Google Colab** untuk data processing & modelling
 - **Pandas & NumPy** untuk data manipulation
 - **Scikit-learn** untuk machine learning
@@ -74,13 +74,16 @@ submission
 ├── model/
 |   ├── student_dropout_model.pkl
 |   └── model_features.pkl
+├── model/
+|   ├── <brwibisono>.dashboard.tsv
+|   ├── <brwibisono>.ml_1.tsv
+|   ├── <brwibisono>.ml_2.tsv
+|   ├── <brwibisono>.ml_3.tsv
+|   └── <brwibisono>.ml_4.tsv
 ├── app.py/                                          
 ├── notebook.ipynb
 ├── requirements.txt
 ├── fact_student.tsv
-├── <brwibisono>.dashboard.tsv
-├── <brwibisono>.ml_1.tsv
-├── <brwibisono>.ml_2.tsv
 └── Readme.md
 ```
 
@@ -88,13 +91,11 @@ submission
 
 1. Pastikan file berikut tersedia dalam satu folder project:
    - `model (folder)`
+   - `media (folder)`
    - `app.py`
    - `notebook.ipynb`
    - `fact_student.tsv`
    - `requirements.txt`
-   - `<brwibisono>.dashboard.png`
-   - `<brwibisono>.ml_1.png`
-   - `<brwibisono>.ml_2.png`
    - `README.md`
 
 2. Buka file `notebook.ipynb` di:
@@ -179,15 +180,27 @@ Dashboard dapat diakses di sini:
 
 🖼️ Dashboard Preview
 
-![Student's Dropout Dasboard](./<brwibisono>dashboard.png)
+![Student's Dropout Dasboard](./media/<brwibisono>dashboard.png)
 
 ---
 
 ### Menjalankan Sistem Machine Learning
-1. Buka link [Student's Dropout by brwibisono](https://brwibisono.streamlit.app) berikut
-Pada page pertama akan muncul seperti ini:
 
+## Buka link [Student's Dropout by brwibisono](https://brwibisono.streamlit.app) berikut
 
+1. Pada page pertama jika ingin `prediksi individual` akan menampilkan seperti ini:
+![ML1](./media/<brwibisono>.ml_1.png)
+
+2. Setelah di isi dan klik 🚀 Resiko Prediksi Dropout, akan menghasilkan seperti ini:
+![ML1](./media/<brwibisono>.ml_2.png)
+
+3. Untuk page kedua jika ingin `prediksi batch (banyak data)` akan menampilkan seperti ini:
+![ML1](./media/<brwibisono>.ml_3.png)
+
+4. Setelah upload file `.csv` disini saya pakai contoh file [data.csv](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv), akan menghasilkan:
+![ML1](./media/<brwibisono>.ml_4.png)
+
+Dan hasil dari data prediksi ke 4 dapat di download berupa file `.csv`
 
 ---
 
