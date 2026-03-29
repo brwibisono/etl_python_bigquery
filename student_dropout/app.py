@@ -15,6 +15,16 @@ st.title("🎓 Prediksi Dropout Mahasiswa")
 st.markdown("Dashboard interaktif untuk memprediksi risiko mahasiswa dropout by Bramantya Wibisono")
 
 # LOAD MODEL
+import os
+
+st.write("📁 CURRENT DIR:", os.getcwd())
+st.write("📂 ROOT FILES:", os.listdir())
+
+try:
+    st.write("📦 MODEL FILES:", os.listdir("model"))
+except Exception as e:
+    st.write("❌ ERROR AKSES FOLDER MODEL:", e)
+    
 model = joblib.load("model/student_dropout_model.pkl")
 feature_columns = joblib.load("model/model_features.pkl")
 
