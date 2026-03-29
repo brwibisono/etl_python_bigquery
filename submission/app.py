@@ -27,8 +27,8 @@ st.markdown("Dashboard interaktif untuk memprediksi risiko mahasiswa dropout by 
 
 # LOAD MODEL
 
-model = joblib.load("model/student_dropout_model.pkl")
-feature_columns = joblib.load("model/model_features.pkl")
+model = joblib.load("etl_python_bigquery/submission/model/student_dropout_model.pkl")
+feature_columns = joblib.load("etl_python_bigquery/submission/model/model_features.pkl")
 
 # DEBUG (optional tapi bagus untuk reviewer)
 with st.expander("🔍 Model Info"):
